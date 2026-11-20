@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="An interactive IEC material about social change and development perspectives and social work practice.">
+<title>Change Begins With Us | Social Change & Development IEC</title>
+<style>
+:root{--cream:#faf7ef;--paper:#fffdf8;--sage:#e7ecdf;--green:#304a38;--green2:#526b52;--gold:#c99b55;--ink:#29352c;--muted:#687166;--line:#e8e1d4;--rose:#f1dfd8}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+.nav{position:sticky;top:0;z-index:20;background:rgba(250,247,239,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;gap:10px;align-items:center;color:var(--green);font-weight:bold;font-size:16px}.logo{width:38px;height:38px;background:var(--green);border-radius:50%;display:grid;place-items:center;color:white;font:22px Arial}
+.brand small{display:block;font:9px Arial;letter-spacing:2px;color:var(--muted);margin-top:4px}
+.navlinks{display:flex;gap:18px;font:12px Arial;color:#4e594e}.navlinks a:hover{color:var(--gold)}
+.menu{display:none;background:none;border:1px solid var(--line);border-radius:20px;padding:8px 12px;color:var(--green)}
+.hero{min-height:570px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(250,247,239,.98) 0%,rgba(250,247,239,.9) 42%,rgba(250,247,239,.15) 100%),url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1900&q=85') center/cover}
+.heroin{max-width:1180px;width:100%;margin:auto;padding:80px 26px 100px;position:relative;z-index:1}
+.eyebrow,.kicker{font-style:italic;color:#9b784b;letter-spacing:1px}.eyebrow{font-size:18px;margin-bottom:16px}
+h1{font-weight:normal;font-size:clamp(48px,7vw,84px);line-height:.98;max-width:720px;color:var(--green);margin:0 0 22px}.script{font-style:italic;color:#849477}
+.hero p{max-width:520px;font-size:18px;line-height:1.7;color:#566052}
+.hero .prepared{margin-top:28px;font:12px Arial;letter-spacing:1.5px;text-transform:uppercase;color:#8c754f}
+.hero .heartline{max-width:560px;margin-top:14px;font-size:17px;line-height:1.7;font-style:italic;color:#526b52}
+.btn{display:inline-block;border:0;border-radius:30px;background:var(--green);color:white;padding:13px 22px;font:13px Arial;transition:.2s}.btn:hover{background:#49644d;transform:translateY(-2px)}
+.section{max-width:1180px;margin:auto;padding:72px 24px}.kicker{text-align:center;font-size:16px}
+h2{text-align:center;font-size:clamp(32px,4.4vw,49px);font-weight:normal;color:var(--green);margin:10px 0 15px}
+.lead{max-width:760px;text-align:center;margin:0 auto 35px;color:var(--muted);font-size:16px;line-height:1.75}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--paper);border:1px solid var(--line);border-radius:19px;overflow:hidden;box-shadow:0 10px 28px #263d2d0c}
+.card img{width:100%;height:175px;object-fit:cover;display:block}.cardbody{padding:22px}
+.tag{display:inline-block;background:#edf0e7;color:#526349;border-radius:20px;padding:6px 11px;font:10px Arial;letter-spacing:1px}
+.card h3{font-weight:normal;font-size:22px;color:var(--green);margin:13px 0 9px}.card p{font:14px/1.7 Arial;color:var(--muted);margin:0}
+.story{background:#edf0e7}.storyin{max-width:1180px;margin:auto;padding:68px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.storyphoto{min-height:370px;border-radius:48% 48% 18px 18px;background:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1100&q=85') center/cover;box-shadow:14px 14px 0 #d8e0d1}
+.storycopy h2{text-align:left}.storycopy p{color:#596457;line-height:1.8;font-size:16px}.quote{border-left:3px solid var(--gold);padding-left:18px;font-style:italic;color:var(--green)!important;font-size:20px!important}
+.tabs{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:26px 0 18px}.tab{border:1px solid #d8dfd2;background:#fffdf8;color:var(--green);border-radius:24px;padding:10px 15px;font:13px Arial}
+.tab[aria-selected="true"]{background:var(--green);color:white;border-color:var(--green)}
+.tabpanel{max-width:900px;margin:auto;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 10px 25px #263d2d0a;min-height:190px}
+.tabpanel h3{font-size:26px;font-weight:normal;color:var(--green);margin:0 0 10px}.tabpanel p{line-height:1.75;color:var(--muted);margin:0 0 10px}
+.example{background:#f0eee5;border-radius:12px;padding:13px 15px;font:14px/1.65 Arial;color:#596457;margin-top:14px}
+.factors{background:#fffdf8}.factorgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.factor{background:#faf7ef;border:1px solid var(--line);border-radius:16px;padding:19px}.factor b{display:block;color:var(--green);font-size:19px;font-weight:normal;margin-bottom:8px}.factor span{font:14px/1.6 Arial;color:var(--muted)}
+.challengegrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}.challenge{padding:23px;border-radius:18px;background:#f0eee5}
+.challenge h3{font-size:22px;font-weight:normal;color:var(--green);margin:0 0 10px}.challenge li{font:14px/1.9 Arial;color:#596457}
+.peoplegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.person img,.issue img{width:100%;height:185px;object-fit:cover;border-radius:12px;margin-bottom:13px;display:block}
+.issuesgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.issue{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:0 8px 22px #263d2d0a}
+.issue h3{font-size:21px;font-weight:normal;color:var(--green);margin:5px 0 8px}
+.issue p{font:14px/1.7 Arial;color:var(--muted);margin:0 0 10px}
+.issue .lens{font:13px/1.6 Arial;color:#526b52;border-top:1px solid var(--line);padding-top:10px}
+.stat{font:30px Georgia;color:var(--green);margin:7px 0}
+.note{font:12px/1.6 Arial;color:#788073}
+
+.person{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:21px;box-shadow:0 8px 22px #263d2d0a}
+.person .role{font:10px Arial;letter-spacing:1px;color:#8c754f;text-transform:uppercase}
+.person h3{font-size:22px;font-weight:normal;color:var(--green);margin:10px 0}
+.person p{font:14px/1.7 Arial;color:var(--muted);margin:0 0 12px}
+.person .connect{border-top:1px solid var(--line);padding-top:11px;font:13px/1.6 Arial;color:#526b52}
+.sources{max-width:900px;margin:26px auto 0;background:#fffdf8;border:1px solid var(--line);border-radius:16px;padding:20px}
+.sources h3{font-size:21px;font-weight:normal;color:var(--green);margin:0 0 10px}
+.sources li{font:13px/1.8 Arial;color:var(--muted);margin:6px 0}
+.sources a{text-decoration:underline;color:#526b52}
+.accordion{max-width:900px;margin:26px auto 0}details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 19px;margin:10px 0}
+summary{cursor:pointer;color:var(--green);font-size:19px}details p{font:14px/1.75 Arial;color:var(--muted);margin:12px 0 0}
+.quiz{max-width:850px;margin:26px auto 0;padding:26px;background:#f0eee5;border-radius:20px}.quiz h3{font-size:24px;font-weight:normal;color:var(--green);margin:0 0 8px}
+.quiz p{color:var(--muted);line-height:1.6}.options{display:grid;gap:10px;margin:17px 0}
+.option{background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:13px 15px;text-align:left;color:var(--ink)}
+.option:hover{border-color:var(--green2)}.option.correct{background:#e3eddf;border-color:#7b9a70}.option.wrong{background:#f4e3df;border-color:#c68d7d}
+#feedback{min-height:25px;font:14px Arial;color:var(--green);margin:8px 0}
+.action{background:var(--green);color:white;text-align:center;padding:72px 22px}.action .kicker{color:#e4c993}
+.action h2{color:white;max-width:820px;margin:12px auto}.action p{max-width:700px;margin:0 auto 22px;color:#e1e8dc;line-height:1.75}
+.pledgebox{max-width:600px;margin:25px auto 0;padding:22px;border:1px solid #ffffff50;border-radius:18px;background:#ffffff0d}
+.pledgebox label{display:flex;gap:12px;text-align:left;align-items:flex-start;margin:13px 0;font:14px/1.5 Arial;color:#f3f4ee}
+.pledgebox input{accent-color:#d8c18f;margin-top:3px}#pledgeMessage{min-height:24px;margin-top:15px;color:#f0d9a8;font-style:italic}
+footer{text-align:center;padding:24px;color:#7c8375;font:12px Arial;line-height:1.8}
+@media(max-width:850px){.issuesgrid{grid-template-columns:1fr 1fr}.peoplegrid{grid-template-columns:1fr 1fr}.navlinks{display:none}.menu{display:block}.navlinks.open{display:flex;position:absolute;top:64px;left:0;right:0;background:var(--cream);padding:18px 24px;flex-direction:column;gap:16px;border-bottom:1px solid var(--line)}.grid3{grid-template-columns:1fr 1fr}.storyin{gap:28px}.factorgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.issuesgrid{grid-template-columns:1fr}.peoplegrid{grid-template-columns:1fr}.hero{min-height:520px;background-position:62% center}.heroin{padding:68px 20px 90px}.hero p{font-size:16px}.grid3,.storyin,.factorgrid,.challengegrid{grid-template-columns:1fr}.storyphoto{min-height:270px;order:2}.section{padding:55px 18px}.storyin{padding:55px 18px}.navin{padding:10px 14px}.brand{font-size:13px}.tabpanel{padding:21px}}
+
+.creator{background:#edf0e7;padding:52px 22px}
+.creatorin{max-width:820px;margin:auto;display:flex;align-items:center;justify-content:center;gap:28px}
+.creatorphoto{width:150px;height:150px;flex:0 0 150px;object-fit:cover;object-position:center 28%;border-radius:50%;border:6px solid #fffdf8;box-shadow:0 8px 24px #263d2d18}
+.creatorcopy h2{text-align:left;font-size:34px;margin:7px 0 8px}
+.creatorcopy p{font:14px/1.7 Arial;color:#596457;margin:0}
+.creatorlabel{font:10px Arial;letter-spacing:2px;color:#9b784b;text-transform:uppercase}
+@media(max-width:600px){.creatorin{flex-direction:column;text-align:center}.creatorcopy h2{text-align:center}}
+
+</style>
+</head>
+<body>
+<header class="nav"><div class="navin">
+<a class="brand" href="#home"><span class="logo">♡</span><span>Social Change &amp; Development<small>LEARN · UNDERSTAND · TAKE ACTION</small></span></a>
+<nav class="navlinks" id="navlinks"><a href="#home">Welcome</a><a href="#basics">The Basics</a><a href="#perspectives">Perspectives</a><a href="#factors">Social Issues</a><a href="#realexamples">Real Examples</a><a href="#philippines-now">Philippines Today</a><a href="#practice">Social Work</a><a href="#reflect">Reflect</a></nav>
+<button class="menu" id="menuBtn" aria-expanded="false">☰ Menu</button>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="heroin">
+<div class="eyebrow">A digital IEC learning experience</div>
+<h1>Change Begins <span class="script">With Us</span></h1>
+<p>Understanding social change and development helps us see why communities face challenges, how people create change, and how social work can help build a fairer and more inclusive society.</p>
+<p class="heartline">Behind every social issue is a person, a family, and a story worth listening to. Real change begins when we choose to understand, care, and stand with one another.</p>
+<div class="prepared">Prepared by: Cristy B. Barcela</div>
+<a class="btn" href="#basics">Explore the IEC&nbsp; →</a>
+</div></section>
+
+<section class="section" id="basics">
+<div class="kicker">Start with the important ideas</div><h2>What Do We Mean by Change and Development?</h2>
+<p class="lead">Social change and development are connected, but they do not mean exactly the same thing. Both involve people, institutions, opportunities, and the conditions that shape everyday life.</p>
+<div class="grid3">
+<article class="card"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=85" alt="Children learning together"><div class="cardbody"><span class="tag">SOCIAL CHANGE</span><h3>Society does not stay the same</h3><p>Social change refers to changes in social relationships, values, behavior, culture, institutions, and ways of living. It may happen slowly or quickly, and it can bring positive or negative effects.</p></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85" alt="Students in a classroom"><div class="cardbody"><span class="tag">DEVELOPMENT</span><h3>Improving people's lives</h3><p>Development is a process of improving people's quality of life and expanding opportunities in education, health, livelihood, safety, freedom, and participation—not simply increasing income.</p></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=85" alt="Community members gathered"><div class="cardbody"><span class="tag">SOCIAL PROGRESS</span><h3>No one should be left behind</h3><p>Meaningful progress happens when people can participate, access services, exercise their rights, and help make decisions that affect their families and communities.</p></div></article>
+</div>
+</section>
+
+<section class="story"><div class="storyin">
+<div class="storyphoto" role="img" aria-label="People standing together in a community"></div>
+<div class="storycopy"><div class="kicker" style="text-align:left">Look beyond individual situations</div><h2>People's Lives Are <span class="script">Connected.</span></h2>
+<p>A family's situation is affected not only by personal choices, but also by access to jobs, education, health services, government support, culture, and the environment. These conditions are connected.</p>
+<p>For example, when a parent loses a job, the family's income may decrease. This can affect food, children's schooling, health, and relationships. Understanding these connections helps us avoid blaming individuals for problems that are also shaped by wider social conditions.</p>
+<p class="quote">“Social change becomes meaningful when improvements in society are felt in people's everyday lives.”</p></div>
+</div></section>
+
+<section class="section" id="perspectives">
+<div class="kicker">Different ways of understanding society</div><h2>Explore the Major Perspectives</h2>
+<p class="lead">Each perspective gives us a different lens. Select a topic to see what it explains and how it can be connected to real community situations.</p>
+<div class="tabs" role="tablist" aria-label="Social change and development perspectives">
+<button class="tab" role="tab" aria-selected="true" data-tab="functionalism">Functionalism</button>
+<button class="tab" role="tab" aria-selected="false" data-tab="conflict">Conflict Theory</button>
+<button class="tab" role="tab" aria-selected="false" data-tab="symbolic">Symbolic Interactionism</button>
+<button class="tab" role="tab" aria-selected="false" data-tab="modernization">Modernization</button>
+<button class="tab" role="tab" aria-selected="false" data-tab="dependency">Dependency</button>
+<button class="tab" role="tab" aria-selected="false" data-tab="human">Human Development</button>
+</div>
+<div class="tabpanel" id="tabpanel" role="tabpanel" aria-live="polite">
+<h3 id="tabTitle">Functionalism</h3><p id="tabText">Society is made up of connected parts—such as family, education, government, and the economy—that perform important functions. When these parts work together, they can contribute to social stability. When one part struggles, other parts may also be affected.</p>
+<div class="example" id="tabExample"><b>Community example:</b> Schools, families, local government, and health centers need to coordinate so children can learn, stay healthy, and receive support.</div>
+</div>
+</section>
+
+<section class="section factors" id="factors">
+<div class="kicker">The forces that shape people's opportunities</div><h2>What Influences Development?</h2>
+<p class="lead">Development is influenced by several connected factors. A problem in one area can affect other parts of people's lives.</p>
+<div class="factorgrid">
+<div class="factor"><b>Economic</b><span>Employment, income, poverty, livelihood, and fair access to resources.</span></div>
+<div class="factor"><b>Political</b><span>Government policies, public services, leadership, accountability, peace, and human rights.</span></div>
+<div class="factor"><b>Social and Cultural</b><span>Education, health, family relationships, beliefs, gender roles, and inclusion.</span></div>
+<div class="factor"><b>Environmental</b><span>Climate change, disasters, natural resources, housing, and a safe environment.</span></div>
+<div class="factor"><b>Technological</b><span>Internet access, digital skills, innovation, and access to information.</span></div>
+<div class="factor"><b>People's Participation</b><span>Community voice, cooperation, leadership, and shared decision-making.</span></div>
+</div>
+<div class="challengegrid">
+<div class="challenge"><h3>Social issues we see today</h3><ul><li>Poverty and unequal opportunities</li><li>Unemployment and insecure livelihood</li><li>Gaps in education, health, and digital access</li><li>Discrimination and social exclusion</li><li>Climate-related risks and disasters</li></ul></div>
+<div class="challenge"><h3>What inclusive development looks like</h3><ul><li>Accessible and responsive public services</li><li>Respect for dignity, rights, and diversity</li><li>Equal opportunities for women, men, and all sectors</li><li>Communities involved in decisions</li><li>People empowered to shape their future</li></ul></div>
+</div>
+</section>
+
+
+<section class="section" id="realexamples">
+<div class="kicker">Real people, real contributions</div><h2>Social Change in Action</h2>
+<p class="lead">Public figures can help bring attention to social issues through journalism, sports, music, volunteer work, and advocacy. These examples show how individual actions can support wider social change—but lasting progress also requires communities, institutions, and public policies.</p>
+<div class="peoplegrid">
+<article class="person"><img src="https://assets.vogue.com/photos/62e0010c62aa4f7f8b62e679/1%3A1/w_1350%2Ch_1350%2Cc_limit/VO0922_UpFront_01.jpg" alt="Maria Ressa in the Rappler office"><div class="role">Journalism · Freedom of expression</div><h3>Maria Ressa</h3><p>Filipino journalist and co-founder of Rappler. She received the 2021 Nobel Peace Prize with Dmitry Muratov for efforts to safeguard freedom of expression.</p><div class="connect"><b>Connection:</b> Conflict Theory and social justice. Her work highlights the importance of accountability, access to information, and the role of a free press in a democracy.</div></article>
+<article class="person"><img src="https://d2nnykqiaju69u.cloudfront.net/photos/Brooke/2021/October/TOWNS%20rectangle%202.png" alt="Hidilyn Diaz in a Team Philippines sports uniform"><div class="role">Sports · Women’s empowerment</div><h3>Hidilyn Diaz</h3><p>She won the Philippines’ first-ever Olympic gold medal at the Tokyo 2020 Games, competing in women’s weightlifting.</p><div class="connect"><b>Connection:</b> Social change and gender equality. Her achievement challenged stereotypes about women in sports and inspired wider recognition of Filipino women athletes.</div></article>
+<article class="person"><img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2023/life/06/02/unicef.jpg" alt="Gary Valenciano and Anne Curtis at a UNICEF Philippines event"><div class="role">Music · Children’s rights</div><h3>Gary Valenciano</h3><p>The singer has served as a UNICEF Philippines National Ambassador and has used his public platform to raise awareness about children’s rights and education.</p><div class="connect"><b>Connection:</b> Human development. His advocacy draws attention to children’s well-being, learning, and the opportunities they need to develop.</div></article>
+<article class="person"><img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2023/life/06/02/unicef.jpg" alt="Anne Curtis and Gary Valenciano at a UNICEF Philippines event"><div class="role">Film · Children’s rights</div><h3>Anne Curtis</h3><p>The actress and television host has worked with UNICEF Philippines as a National Ambassador, including advocacy related to children’s immunization and early childhood education.</p><div class="connect"><b>Connection:</b> Human development and people-centered development. Healthy childhood and early learning help expand a child’s future opportunities.</div></article>
+<article class="person"><img src="https://sa.kapamilya.com/absnews/abscbnnews/media/2020/tvpatrol/11/10/kapamilya.jpg" alt="Angel Locsin and volunteers at a Philippine Red Cross welfare desk"><div class="role">Volunteerism · Disaster response</div><h3>Angel Locsin</h3><p>The Philippine Red Cross has documented her participation in relief packing and distribution activities, including support for families affected by disasters.</p><div class="connect"><b>Connection:</b> Community solidarity and social work values. Volunteer action can support affected families, while organized disaster response and public services remain essential.</div></article>
+</div>
+<p class="lead" style="margin-top:24px;margin-bottom:0"><b>Remember:</b> These people are examples of public advocacy and contribution—not proof that one person alone can solve a social problem. Social change is stronger when people work together and systems also improve.</p>
+</section>
+
+
+<section class="section" id="philippines-now">
+<div class="kicker">Connecting theories to everyday Filipino life</div>
+<h2>What Is Happening in the Philippines Today?</h2>
+<p class="lead">Social change is not just an idea in a textbook. We can see it in the daily experiences of Filipino families, workers, students, and communities. These examples use recent reports available as of November 2026.</p>
+<div class="issuesgrid">
+<article class="issue">
+<img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=85" alt="Children and families in a community">
+<div class="role">Poverty · Food security</div><h3>1. Rising pressure on household budgets</h3>
+<div class="stat">55%</div>
+<p>In its September 2026 survey, Social Weather Stations reported that 55% of Filipino families rated themselves as poor. Self-rated food poverty also rose to 44%.</p>
+<div class="lens"><b>Why it matters:</b> Families may need to choose between food, transportation, school needs, medicine, and bills. Social workers can help connect households to appropriate services and support, while advocating for decent work and responsive social protection.</div>
+<div class="note">Source: SWS, October 13, 2026. Self-rated survey results reflect how respondents describe their situation; they are not the same as the official poverty rate.</div>
+</article>
+<article class="issue">
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85" alt="Workers at a construction site">
+<div class="role">Employment · Economic security</div><h3>2. The challenge of finding secure work</h3>
+<p>Having a job does not always mean having stable income, benefits, or protection. The World Bank's 2026 report notes that only about one in three Filipino workers contributes to social security.</p>
+<div class="lens"><b>Why it matters:</b> Informal and insecure work can make families vulnerable when illness, job loss, or old age happens. Social development includes decent work, fair opportunities, and access to social protection.</div>
+<div class="note">Source: World Bank, Building the Filipino Middle Class, June 4, 2026.</div>
+</article>
+<article class="issue">
+<img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=1000&q=85" alt="Flooded street after heavy rain">
+<div class="role">Climate change · Disaster risk</div><h3>3. Floods, typhoons, and vulnerable communities</h3>
+<p>The Philippines remains highly exposed to extreme weather. UN reporting noted that 23 tropical cyclones affected the country in 2025, while flooding and landslides affected millions.</p>
+<div class="lens"><b>Why it matters:</b> Low-income families, older persons, children, persons with disabilities, and people in hazard-prone areas may face greater risks. Social work includes preparedness, evacuation support, relief coordination, psychosocial support, and helping communities recover.</div>
+<div class="note">Source: United Nations Philippines, 2025 annual results and 2026 Joint Work Plan.</div>
+</article>
+<article class="issue">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85" alt="Students learning in a classroom">
+<div class="role">Education · Equal opportunity</div><h3>4. Unequal access to quality learning</h3>
+<p>Students do not all have the same learning conditions. Some have reliable internet, devices, books, and quiet study spaces; others share gadgets, travel far, or help support their families.</p>
+<div class="lens"><b>Why it matters:</b> The digital divide and unequal learning resources can widen existing gaps. A people-centered response includes accessible learning support, school-community partnerships, and services for children at risk of falling behind.</div>
+<div class="note">Context: OECD Economic Surveys: Philippines 2026 identifies the quality and reach of public services, including education, as important development concerns.</div>
+</article>
+<article class="issue">
+<img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=85" alt="Fresh produce at a public market">
+<div class="role">Cost of living · Food and transport</div><h3>5. Higher costs affect everyday choices</h3>
+<p>When fuel, transport, and food costs rise, low-income households feel the pressure quickly because a large share of their budget goes to basic needs. A 2026 UN Philippines report described how global fuel-price shocks affected domestic prices earlier in the year.</p>
+<div class="lens"><b>Why it matters:</b> Economic changes can affect nutrition, school attendance, access to health care, and family well-being. Social workers should understand these wider pressures when assessing a family's needs.</div>
+<div class="note">Source: United Nations Philippines, 2026 Joint Work Plan summary.</div>
+</article>
+<article class="issue">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85" alt="Person using a laptop and digital technology">
+<div class="role">Technology · Digital inclusion</div><h3>6. Digital access: opportunity and exclusion</h3>
+<p>Online learning, job applications, banking, and government services can save time—but people without a device, stable connection, digital skills, or accessible platforms may be left behind.</p>
+<div class="lens"><b>Why it matters:</b> Technology can support modernization, but development must be inclusive. Digital services should be paired with face-to-face assistance and accessible alternatives.</div>
+<div class="note">Related perspective: Modernization, balanced with the Human Development Approach.</div>
+</article>
+</div>
+</section>
+
+<section class="section" id="practice">
+<div class="kicker">From understanding to meaningful action</div><h2>How Social Work Contributes</h2>
+<p class="lead">Social work connects people with resources, strengthens relationships, supports communities, and addresses barriers that prevent people from participating fully in society.</p>
+<div class="accordion">
+<details><summary>Empowerment and participation</summary><p>Social workers help people recognize their strengths, express their needs, participate in decisions, and become active partners in finding solutions. People should not be treated only as recipients of help.</p></details>
+<details><summary>Human rights and social justice</summary><p>Social work promotes dignity, equality, inclusion, and access to services. It also challenges discrimination and unfair systems that limit people's opportunities.</p></details>
+<details><summary>Community organizing and partnership</summary><p>Social workers work with families, community members, local leaders, government agencies, and organizations. Cooperation helps make programs more responsive and sustainable.</p></details>
+<details><summary>People-centered and holistic practice</summary><p>Look at the whole situation of a person or family. Consider personal strengths, family relationships, community resources, and wider social conditions before planning support.</p></details>
+<details><summary>Example from community development practice</summary><p>In community-based work such as KALAHI-CIDSS, residents identify their needs, take part in planning, and work together on community priorities. This reflects participation and empowerment: solutions are stronger when community members have a voice and ownership.</p></details>
+</div>
+</section>
+
+<section class="section" id="reflect">
+<div class="kicker">Check what you have learned</div><h2>Pause and Reflect</h2>
+<p class="lead">Choose the best answer. Read the feedback to review the key idea.</p>
+<div class="quiz"><h3 id="question">A community has low attendance at a public consultation. What is the most people-centered first step?</h3>
+<div class="options" id="options">
+<button class="option" data-correct="false">Assume residents are not interested.</button>
+<button class="option" data-correct="true">Ask residents about barriers and how they prefer to participate.</button>
+<button class="option" data-correct="false">Make decisions without consulting the community.</button>
+</div><div id="feedback" aria-live="polite"></div><button class="btn" id="nextQuestion" style="display:none">Next question →</button>
+</div>
+</section>
+
+<section class="action" id="join">
+<div class="kicker">A personal commitment</div><h2>A fairer future needs all of us.</h2>
+<p>Listen to people's experiences. Respect differences. Support inclusive programs. Take part in community decisions. Small actions, when done together, can contribute to lasting social change.</p>
+<div class="pledgebox"><div style="font-size:21px;font-style:italic;margin-bottom:15px">My commitment to positive change</div>
+<label><input type="checkbox" class="pledge"> I will listen to and respect people's experiences.</label>
+<label><input type="checkbox" class="pledge"> I will support fairness, inclusion, and human dignity.</label>
+<label><input type="checkbox" class="pledge"> I will take part in actions that help my community.</label>
+<button class="btn" id="pledgeBtn" style="margin-top:10px;background:#e8d8b8;color:var(--green)">Make my pledge ♡</button><div id="pledgeMessage" aria-live="polite"></div>
+</div><div style="margin-top:32px;font:11px Arial;letter-spacing:3px;color:#d9dfd2">PEOPLE · PARTICIPATION · JUSTICE · DEVELOPMENT</div>
+</section>
+
+<section class="section" id="references">
+<div class="kicker">For further reading</div><h2>References and Sources</h2>
+<p class="lead">The following credible sources support the real-life examples featured in this IEC material.</p>
+<div class="sources"><h3>Selected references</h3><ul>
+<li>Nobel Peace Prize. (2021). <a href="https://www.nobelpeaceprize.org/laureates/2021" target="_blank" rel="noopener">The 2021 Nobel Peace Prize: Maria Ressa and Dmitry Muratov</a>.</li>
+<li>Philippine Olympians. <a href="https://www.philippineolympians.org/oly/2020-olympics-tokyo-weightlifting-diaz-hidilyn" target="_blank" rel="noopener">Hidilyn Diaz — Tokyo 2020 Olympics profile</a>.</li>
+<li>UNICEF Philippines. (2023). <a href="https://www.unicef.org/philippines/press-releases/gary-v-and-anne-curtis-renew-contract-unicef-philippines" target="_blank" rel="noopener">Gary V and Anne Curtis renew contract with UNICEF Philippines</a>.</li>
+<li>Philippine Red Cross. (2019). <a href="https://redcross.org.ph/2019/11/page/3/" target="_blank" rel="noopener">Report on Angel Locsin’s volunteer work with the Philippine Red Cross</a>.</li>
+
+<li>Social Weather Stations. (October 13, 2026). <a href="https://sws.org.ph/social-weather-report-self-rated-poverty-rises-by-6-to-55-while-self-rated-food-poverty-rises-by-8-to-44-between-june-and-september-2026/" target="_blank" rel="noopener">Self-Rated Poverty rises to 55%; Self-Rated Food Poverty rises to 44%.</a></li>
+<li>World Bank. (June 4, 2026). <a href="https://www.worldbank.org/en/news/press-release/2026/06/04/philippines-can-end-poverty-and-build-a-middle-class-society-by-2040-but-only-with-urgent-reforms" target="_blank" rel="noopener">Philippines Can End Poverty and Build a Middle-Class Society by 2040 — But Only with Urgent Reforms.</a></li>
+<li>United Nations Philippines. (2026). <a href="https://philippines.un.org/sites/default/files/2026-04/UN-PHL-JWP%282026%29_Summary_Doc_20260415.pdf" target="_blank" rel="noopener">UN Philippines Joint Work Plan 2026 — Summary Document.</a></li>
+<li>OECD. (February 12, 2026). <a href="https://www.oecd.org/en/publications/oecd-economic-surveys-philippines-2026_f0e0c581-en/full-report/executive-summary_e27fd6d6.html" target="_blank" rel="noopener">OECD Economic Surveys: Philippines 2026 — Executive Summary.</a></li>
+<li>United Nations Development Programme. <a href="https://hdr.undp.org/about/human-development" target="_blank" rel="noopener">Human Development Reports — About Human Development</a>.</li>
+</ul></div>
+</section>
+
+
+<section class="creator" id="creator">
+  <div class="creatorin">
+    <img class="creatorphoto" src="data:image/jpeg;base64,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" alt="Portrait of Crist B. Barcela, creator of this IEC material">
+    <div class="creatorcopy">
+      <div class="creatorlabel">About the creator</div>
+      <h2>Prepared by <span class="script">Cristy B. Barcela</span></h2>
+      <p>This Information, Education, and Communication (IEC) material was prepared as a learning output on Social Change and Development. It aims to make key perspectives, current social issues, and the role of social work easier to understand through real-life examples.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>SOCIAL CHANGE &amp; DEVELOPMENT · DIGITAL IEC MATERIAL · PREPARED BY CRISTY B. BARCELA<br>LEARN · UNDERSTAND · TAKE ACTION<br>“Change begins when people work together for a better community.”</footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navlinks');
+menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+const tabContent={
+functionalism:{title:'Functionalism',text:'Society is made up of connected parts—such as family, education, government, and the economy—that perform important functions. When these parts work together, they can contribute to social stability. When one part struggles, other parts may also be affected.',example:'Schools, families, local government, and health centers need to coordinate so children can learn, stay healthy, and receive support.'},
+conflict:{title:'Conflict Theory',text:'Society includes groups with unequal access to power, opportunities, and resources. Conflict theory focuses on inequality and explains how social change can happen when people challenge unfair systems and demand justice.',example:'When some communities lack safe water while others have reliable services, this perspective asks who has access to resources, whose needs are prioritized, and how the gap can be addressed.'},
+symbolic:{title:'Symbolic Interactionism',text:'People create and share meanings through everyday interaction, language, symbols, and relationships. These meanings influence how people see themselves and treat others.',example:'If people label a poor family as “lazy,” they may overlook barriers such as limited jobs, low wages, or lack of transportation. Changing harmful attitudes can change everyday interactions.'},
+modernization:{title:'Modernization Perspective',text:'This perspective explains development in relation to changes such as industrialization, urbanization, education, technology, and new forms of production and institutions. It highlights how societies may transform as they adopt new systems and technologies.',example:'Digital services can make information and transactions faster. However, development must also consider people who have no internet connection, devices, or digital skills.'},
+dependency:{title:'Dependency Perspective',text:'This perspective emphasizes that poverty and underdevelopment are also shaped by unequal relationships between wealthier and poorer countries or regions. It asks how dependence on external markets, investment, and decision-making can limit local development.',example:'A community that relies on one unstable industry may be vulnerable to decisions made elsewhere. Strengthening local livelihoods, skills, and resources can help build resilience.'},
+human:{title:'Human Development Approach',text:'Development should expand people\'s real opportunities and capabilities to live lives they have reason to value. It looks beyond income and includes health, education, freedom, participation, dignity, and well-being.',example:'A development program should not only count how many families received assistance. It should also consider whether families gained better access to education, health care, livelihood, and meaningful choices.'}
+};
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{
+document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected','false'));btn.setAttribute('aria-selected','true');
+const d=tabContent[btn.dataset.tab];document.getElementById('tabTitle').textContent=d.title;
+document.getElementById('tabText').textContent=d.text;document.getElementById('tabExample').innerHTML='<b>Community example:</b> '+d.example;
+}));
+const questions=[
+{q:'A community has low attendance at a public consultation. What is the most people-centered first step?',opts:['Assume residents are not interested.','Ask residents about barriers and how they prefer to participate.','Make decisions without consulting the community.'],correct:1,why:'Correct! Participation means making space for people\'s voices and understanding what prevents them from joining.'},
+{q:'Which perspective focuses on unequal power, resources, and opportunities?',opts:['Conflict Theory','Symbolic Interactionism','Functionalism'],correct:0,why:'That is right. Conflict theory draws attention to inequality and how people may challenge unfair systems.'},
+{q:'A family cannot access a service because the requirements are confusing. What can a social worker do?',opts:['Blame the family.','Ignore the barrier.','Help clarify the process and coordinate with the service provider.'],correct:2,why:'Exactly. Social workers help connect people to services and address barriers while respecting their dignity.'},
+{q:'Which statement best describes development?',opts:['It is measured only by income.','It expands people\'s opportunities, capabilities, and well-being.','It happens only when technology improves.'],correct:1,why:'Correct! Development includes health, education, freedom, participation, dignity, and quality of life.'}
+];
+let qIndex=0,answered=false;
+function renderQuestion(){const q=questions[qIndex];answered=false;document.getElementById('question').textContent=q.q;const box=document.getElementById('options');box.innerHTML='';
+q.opts.forEach((opt,i)=>{const b=document.createElement('button');b.className='option';b.textContent=opt;b.addEventListener('click',()=>answer(i,b));box.appendChild(b);});
+document.getElementById('feedback').textContent='';document.getElementById('nextQuestion').style.display='none';}
+function answer(i,button){if(answered)return;answered=true;const q=questions[qIndex],buttons=[...document.querySelectorAll('.option')];
+buttons.forEach((b,n)=>{b.disabled=true;if(n===q.correct)b.classList.add('correct');});if(i!==q.correct)button.classList.add('wrong');
+document.getElementById('feedback').textContent=q.why;document.getElementById('nextQuestion').style.display='inline-block';}
+document.getElementById('nextQuestion').addEventListener('click',()=>{qIndex=(qIndex+1)%questions.length;renderQuestion();});renderQuestion();
+document.getElementById('pledgeBtn').addEventListener('click',()=>{const checked=[...document.querySelectorAll('.pledge')].filter(x=>x.checked).length;const msg=document.getElementById('pledgeMessage');
+msg.textContent=checked?'Thank you for choosing to be part of positive change. Every action matters. ♡':'Please choose at least one commitment.';});
+</script>
+</body></html>
